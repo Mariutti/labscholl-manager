@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.bg-roxo {
+  background: #7749F8;
+  height: 100vh;
+ }
+
+.bg-branco {
+  background: white;
+
+}

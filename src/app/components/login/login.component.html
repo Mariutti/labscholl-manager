@@ -1,0 +1,36 @@
+<div class="bg-roxo row">
+  <div class="col-sm-3"></div>
+  <div class="bg-branco col-sm-6 mt-5 mb-5 rounded-3 p-5">
+    <h1>LabScholl Manager <i class="bi bi-clipboard-data"></i></h1>
+    <h3>Bem vindo(a)!</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="(onSubmit)">
+      <div class="form-group">
+        <label for="exampleInputEmail1">E-mail</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          placeholder="usuario@email.com"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Senha</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Insira a sua senha"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+
+    <div class="cadastro mb-5">
+      <p>Ainda não possui uma conta?</p>
+      <button type="" class="btn btn-primary">Cadastrar</button>
+    </div>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
