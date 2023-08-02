@@ -3,10 +3,10 @@
     {
       "nome": "pedro",
       "telefone": "99999999999",
-      "dataNascimento": "2018-12-15T00:00:00.000Z",
-      "cpf": "88888888888",
-      "email": "88888888888",
-      "senha": "senha1209",
+      "dataNascimento": "1981-05-15T00:00:00.000Z",
+      "cpf": "99999999999",
+      "email": "user@email.com",
+      "senha": "12345678",
       "id": 1
     }
   ]

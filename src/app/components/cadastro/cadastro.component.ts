@@ -45,7 +45,7 @@ export class CadastroComponent {
       telefone: this.cadastroForm.get('telefone')?.value,
       dataNascimento: new Date(this.cadastroForm.get('dataNascimento')?.value),
       cpf: this.cadastroForm.get('cpf')?.value,
-      email: this.cadastroForm.get('cpf')?.value,
+      email: this.cadastroForm.get('email')?.value,
       senha: this.cadastroForm.get('senha')?.value,
     };
     await this.pedagogoService.cadastrarPedagogo(pedagogo);
