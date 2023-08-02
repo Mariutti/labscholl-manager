@@ -12,9 +12,9 @@ export class LoginComponent {
 
   constructor(){
     this.loginForm = new FormGroup({
-      email: new FormControl('',[ Validators.email, Validators.required])
+      email: new FormControl('',[ Validators.email, Validators.required]),
+      senha: new FormControl('', [Validators.required, Validators.minLength(8)],)
     });
-    senha: new FormControl('', [Validators.required, Validators.minLength(8)],)
   }
 
   onSubmit(){

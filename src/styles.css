@@ -3,11 +3,10 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 .bg-roxo {
-  background: #7749F8;
+  background: #7749f8;
   height: 100vh;
- }
+}
 
 .bg-branco {
   background: white;
-
 }
