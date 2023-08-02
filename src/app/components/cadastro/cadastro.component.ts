@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { iPedagogo } from 'src/app/interfaces/iPedagogo';
+import { PedagogoService } from 'src/app/services/pedagogo.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -9,7 +12,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CadastroComponent {
   cadastroForm: FormGroup;
 
-  constructor() {
+  constructor(
+    private router: Router,
+    private pedagogoService: PedagogoService
+  ) {
     this.cadastroForm = new FormGroup({
       nome: new FormControl('', [Validators.required]),
       telefone: new FormControl('', [
@@ -33,7 +39,16 @@ export class CadastroComponent {
     });
   }
 
-  onSubmit() {
-    console.log(this.cadastroForm.value);
+  async onSubmit() {
+    const pedagogo: iPedagogo = {
+      nome: this.cadastroForm.get('nome')?.value,
+      telefone: this.cadastroForm.get('telefone')?.value,
+      dataNascimento: new Date(this.cadastroForm.get('dataNascimento')?.value),
+      cpf: this.cadastroForm.get('cpf')?.value,
+      email: this.cadastroForm.get('cpf')?.value,
+      senha: this.cadastroForm.get('senha')?.value,
+    };
+    await this.pedagogoService.cadastrarPedagogo(pedagogo);
+    this.router.navigate(['login']);
   }
 }
