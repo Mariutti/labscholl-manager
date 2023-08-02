@@ -4,20 +4,36 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
-
   cadastroForm: FormGroup;
 
-  constructor(){
+  constructor() {
     this.cadastroForm = new FormGroup({
-      email: new FormControl('',[ Validators.email, Validators.required]),
-      senha: new FormControl('', [Validators.required, Validators.minLength(8)],)
+      nome: new FormControl('', [Validators.required]),
+      telefone: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^[0-9]{11}$'),
+      ]),
+      dataNascimento: new FormControl('', [Validators.required]),
+      cpf: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^[0-9]{11}$'),
+      ]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      senha: new FormControl('', [
+        Validators.required,
+        Validators.minLength(8),
+      ]),
+      confirmacaoSenha: new FormControl('', [
+        Validators.required,
+        Validators.minLength(8),
+      ]),
     });
   }
 
-  onSubmit(){
-    console.log(this.cadastroForm.value)
+  onSubmit() {
+    console.log(this.cadastroForm.value);
   }
 }
