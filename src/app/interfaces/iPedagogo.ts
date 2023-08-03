@@ -1,8 +1,8 @@
 export interface iPedagogo {
-  nome: String;
-  telefone: String;
+  nome: string;
+  telefone: string;
   dataNascimento: Date;
-  cpf: String;
-  email: String;
-  senha: String
+  cpf: string;
+  email: string;
+  senha: string
 }

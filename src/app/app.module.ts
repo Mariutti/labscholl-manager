@@ -14,6 +14,9 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { LoginComponent } from './components/login/login.component';
 import { AutenticacaoLayoutComponent } from './layouts/autenticacao-layout/autenticacao-layout.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { AlunosComponent } from './components/alunos/alunos.component';
+import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { AutenticacaoLayoutComponent } from './layouts/autenticacao-layout/auten
     LoginComponent,
     AutenticacaoLayoutComponent,
     CadastroComponent,
+    HeaderComponent,
+    AlunosComponent,
+    BaseLayoutComponent,
   ],
   imports: [
     NgxMaskDirective,
